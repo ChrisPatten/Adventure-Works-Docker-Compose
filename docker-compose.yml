@@ -1,0 +1,8 @@
+version: '3'
+services:
+  sql:
+    build: ./bld
+    ports:
+      - "1433:1433"
+    volumes:
+      - "/var/opt/mssql/data"
