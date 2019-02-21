@@ -2,6 +2,10 @@ version: '3'
 services:
   sql:
     build: ./bld
+    environment: 
+      # Pick Adventure Works or Wide World Importers database
+      - SEED_DATA=all # "adventure", "wideworld", or "all"
+      - DB_TYPE=all # "oltp", "dw", or "all"
     ports:
       - "1433:1433"
     volumes:
